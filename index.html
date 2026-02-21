@@ -858,7 +858,7 @@
             autoEntryTimer = setInterval(() => {
                 autoEntrySeconds--;
                 if (autoEntrySeconds > 0) {
-                    ui.autoCountdownText.innerText = `若未检测到手势，${autoEntrySeconds}秒后自动开始...`;
+                    ui.autoCountdownText.innerText = `，${autoEntrySeconds}秒后自动开始...`;
                 } else {
                     clearInterval(autoEntryTimer);
                     autoEntryTimer = null;
