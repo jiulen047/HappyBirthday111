@@ -850,7 +850,7 @@
         function startAutoEntryCountdown() {
             autoEntrySeconds = 15;
             ui.autoCountdownText.classList.remove('hidden');
-            ui.autoCountdownText.innerText = `，${autoEntrySeconds}秒后自动开始...`;
+            ui.autoCountdownText.innerText = `${autoEntrySeconds}秒后自动开始...`;
             
             // 清除旧的计时器（如果存在）
             if (autoEntryTimer) clearInterval(autoEntryTimer);
@@ -858,7 +858,7 @@
             autoEntryTimer = setInterval(() => {
                 autoEntrySeconds--;
                 if (autoEntrySeconds > 0) {
-                    ui.autoCountdownText.innerText = `，${autoEntrySeconds}秒后自动开始...`;
+                    ui.autoCountdownText.innerText = `${autoEntrySeconds}秒后自动开始...`;
                 } else {
                     clearInterval(autoEntryTimer);
                     autoEntryTimer = null;
